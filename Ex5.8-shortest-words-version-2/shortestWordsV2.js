@@ -14,11 +14,15 @@ function longestWords(string) {
   return Object.keys(wordsLength).filter((key) => wordsLength[key] === longest);
 }
 
-console.assert(
-  ["how", "are", "you"] === longestWords("hi how are you?"),
-  JSON.stringify(longestWords("hi how are you?"))
-);
-console.assert(
-  ["name"] === longestWords("hi my name is:"),
-  JSON.stringify(longestWords("hi my name is:"))
-);
+// console.assert(
+//   ["how", "are", "you"] === longestWords("hi how are you?"),
+//   JSON.stringify(longestWords("hi how are you?"))
+// );
+// console.assert(
+//   ["name"] === longestWords("hi my name is:"),
+//   JSON.stringify(longestWords("hi my name is:"))
+// );
+
+module.exports = {
+  longestWords,
+};
