@@ -6,17 +6,21 @@
 function SumLowest(arr) {
   if (
     arr.every(function (element) {
-      return typeof element === "number";
+      return (
+        typeof element === "number" && element >= 0 && Number.isInteger(element)
+      );
     }) &&
     arr.length >= 4
   ) {
     const sortedArr = [...arr].sort((a, b) => a - b); //shallow copy for not mutating the original array
     return sortedArr[0] + sortedArr[1];
   } else {
-    return "Please enter array of numbers only, and minimum length of 4.";
+    return "Please enter array of positive integers only, and minimum length of 4.";
   }
 }
 console.log(SumLowest([10, 343445353, 3453445, 3453545353453]));
 console.log(SumLowest([19, 5, 42, 2, 77]));
 console.log(SumLowest([19, 5, 42, "2", 77]));
 console.log(SumLowest([19, 1, 2, 77]));
+console.log(SumLowest([-19, 1, 2, 77]));
+console.log(SumLowest([19.65, 1, 2, 77]));
