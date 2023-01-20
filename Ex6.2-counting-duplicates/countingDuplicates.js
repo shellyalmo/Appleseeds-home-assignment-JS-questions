@@ -20,8 +20,8 @@ function countDuplicates(inputString) {
   });
   return counter;
 }
-// console.assert(2, countDuplicates("ABBA"), countDuplicates("ABBA"));
-// console.assert(0, countDuplicates("abcde"),
+console.assert(2 === countDuplicates("ABBA"), countDuplicates("ABBA"));
+console.assert(0 === countDuplicates("abcde"));
 
 console.log(countDuplicates("abcde"));
-// console.assert(2, countDuplicates("aA11"), countDuplicates("aA11"));
+console.assert(2 === countDuplicates("aA11"), countDuplicates("aA11"));
