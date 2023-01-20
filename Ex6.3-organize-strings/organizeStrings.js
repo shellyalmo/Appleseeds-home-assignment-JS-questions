@@ -2,10 +2,8 @@
 
 function organizeStrings(s1, s2) {
   let allLetters = [];
-  for (let letter of s1) {
-    allLetters.push(letter);
-  }
-  for (let letter of s2) {
+  let newString = s1 + s2;
+  for (let letter of newString) {
     allLetters.push(letter);
   }
   const unique = new Set(allLetters);
