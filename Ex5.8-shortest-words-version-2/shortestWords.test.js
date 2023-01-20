@@ -13,5 +13,5 @@ test("name", () => {
 });
 
 test("weather the weather is wet", () => {
-  assert.deepEqual(["weaXXXther"], longestWords("weather the weather is wet"));
+  assert.deepEqual(["weaxxxther"], longestWords("weather the weather is wet"));
 });
