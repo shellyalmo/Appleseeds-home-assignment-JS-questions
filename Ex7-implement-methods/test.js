@@ -1,4 +1,8 @@
-const { implementFilter, implementForEach } = require("./implementMethods");
+const {
+  implementFilter,
+  implementForEach,
+  implementMap,
+} = require("./implementMethods");
 const test = require("node:test");
 const assert = require("node:assert");
 
@@ -26,4 +30,10 @@ test(`implementForEach`, () => {
   const callback = (word, index, array) => console.log(word, index, array);
   implementForEach(input, callback);
   input.forEach(callback);
+});
+
+test(`implementMap`, () => {
+  const input = ["spray", "limit", false, "exuberant", "destruction", 5];
+  const myMap = (word, index, array) => typeof word === "string";
+  assert.deepEqual(implementMap(input, myMap), input.map(myMap));
 });
