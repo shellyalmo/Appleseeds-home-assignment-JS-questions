@@ -12,7 +12,7 @@ function SumLowest(arr) {
     }) &&
     arr.length >= 4
   ) {
-    const sortedArr = [...arr].sort((a, b) => a - b); //shallow copy for not mutating the original array
+    const sortedArr = arr.sort((a, b) => a - b);
     return sortedArr[0] + sortedArr[1];
   } else {
     return "Please enter array of positive integers only, and minimum length of 4.";
